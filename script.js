@@ -37,7 +37,7 @@ function playRound(playerSelection, computerSelection){
             {
                 playerscore++;
                 playerScoreElement.textContent = playerscore;
-                if(playerscore >= 5){
+                if(playerscore >= 10){
                     gameOver = true;
                     return "Congratulations! You won the game!";
                 }
@@ -46,7 +46,7 @@ function playRound(playerSelection, computerSelection){
     else{
             computerscore++;
             computerScoreElement.textContent = computerscore; 
-            if(computerscore === 5){
+            if(computerscore >= 10){
                 gameOver = true;
                 return "Sorry! You lost the game!";
             }  
@@ -59,6 +59,6 @@ restartButton.addEventListener('click', () => {
     gameOver = false;
     playerScoreElement.textContent = playerscore;
     computerScoreElement.textContent = computerscore;
-    resultElement.textContent = " game reset! Play again!";
+    resultElement.textContent = " game restart! Play again!";
 });
 
